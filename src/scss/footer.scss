@@ -1,0 +1,24 @@
+//====================================================================================================
+.footer {
+	@include adaptiveValue("height", 360, 200);
+	@include adaptiveValue("padding-bottom", 40, 25);
+	background: url('@img/footer-bg.jpg') 50% 70% / cover no-repeat;
+	display: flex;
+	&__container {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: end;
+		justify-content: center;
+	}
+
+	&__logo {
+		display: block;
+		@include adaptiveValue("width", 136, 79, 0, 767.98, 320);
+		@include adaptiveValue("height", 80, 46, 0, 767.98, 320);
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+//====================================================================================================

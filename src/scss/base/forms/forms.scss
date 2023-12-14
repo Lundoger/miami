@@ -1,0 +1,118 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+		background: #F7F8FF;
+		border-radius: rem(8);
+		width: 100%;
+		padding: 0 rem(17);
+		height: rem(48);
+		color:#000;
+		font-size: rem(14);
+		line-height: math.div(20 , 14);
+		outline: none;
+		transition: all 0.3s ease 0s;
+		border: rem(2) solid transparent;
+		&::placeholder {
+			color: #8F99A8;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				border: rem(2) solid #CCD0E0;
+			}
+		}
+		&:focus {
+			border: rem(2) solid $blueColor;
+		}
+	}
+	&__area {
+		background: #F7F8FF;
+		border-radius: rem(8);
+		width: 100%;
+		padding: rem(14) rem(17);
+		height: rem(144);
+		resize: none;
+		color:#000;
+		font-size: rem(14);
+		line-height: math.div(20 , 14);
+		outline: none;
+		border: rem(2) solid transparent;
+		&::placeholder {
+			color: #8F99A8;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				border: rem(2) solid #CCD0E0;
+			}
+		}
+		&:focus {
+			border: rem(2) solid $blueColor;
+		}
+	}
+
+	&__button {
+		font-weight: 700;
+		color: #FFFFFF;
+		padding: rem(21) rem(35);
+		background: $blueColor;
+		border-radius: rem(8);
+		transition: all 0.3s ease 0s;
+		margin-top: rem(16);
+		@media (any-hover: hover){
+			&:hover{
+				box-shadow: 0px 13px 27px rgba(0, 83, 181, 0.46);
+			}
+		}
+		&:active {
+			box-shadow: 0px 8px 14px rgba(0, 83, 181, 0.48);
+		}
+	}
+	&__error {
+	}
+}
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

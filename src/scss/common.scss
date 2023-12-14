@@ -1,0 +1,82 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+
+	&__main-screen {
+		@include adaptiveValue("margin-bottom", 100, 60);
+	}
+	&__about-us {
+		@include adaptiveValue("margin-bottom", 100, 60);
+	}
+	&__testimonials {
+		@include adaptiveValue("margin-bottom", 100, 60);
+	}
+	&__contacts {
+		@include adaptiveValue("margin-bottom", 100, 60);
+	}
+	&__gallery {
+		@include adaptiveValue("margin-bottom", 100, 60);
+	}
+}
+
+.title {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 48, 36);
+	line-height: 1;
+	letter-spacing: -1.5px;
+	color: #000000;
+	position: relative;
+	text-align: center;
+	&::after{
+		content:'';
+		background: url('@img/icons/title-decor.svg') 0 0 / 100% no-repeat;
+		width: rem(20);
+		height: rem(13);
+		position: absolute;
+		bottom: rem(-18);
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	opacity: 0;
+	transform: translate(0, 100%);
+	&._watcher-view {
+		opacity: 1;
+		transform: translate(0px,0px);
+		transition: all 0.5s ease 0s;
+	}
+}
+
+.breadcrumbs {
+	white-space: nowrap;
+	overflow: auto;
+	&__list {
+		display: flex;
+		gap: rem(5);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: rem(5);
+		&:not(:last-child) {
+			&::after{
+				content:'/';
+				line-height: math.div(27 , 16);
+			}
+		}
+	}
+
+	&__link {
+		line-height: math.div(27 , 16);
+		font-weight: 700;
+		color: $blueColor;
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__current {
+		line-height: math.div(27 , 16);
+	}
+}
